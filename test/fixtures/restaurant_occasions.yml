@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  resturant_id: 1
+  occasion_id: 1
+
+two:
+  resturant_id: 1
+  occasion_id: 1

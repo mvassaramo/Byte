@@ -1,0 +1,2 @@
+class Craving < ApplicationRecord
+end

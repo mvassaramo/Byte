@@ -1,0 +1,2 @@
+module CravingsHelper
+end
