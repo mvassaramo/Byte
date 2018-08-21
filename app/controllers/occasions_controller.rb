@@ -1,2 +1,3 @@
 class OccasionsController < ApplicationController
+
 end

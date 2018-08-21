@@ -1,2 +1,0 @@
-class RestaurantOccasionsController < ApplicationController
-end

@@ -1,2 +1,0 @@
-class RestaurantOccasion < ApplicationRecord
-end

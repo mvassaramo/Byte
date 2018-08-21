@@ -1,0 +1,15 @@
+<h1> List of all the Restaurants </h1>
+
+<% @restaurants.each do |restaurant| %>
+<%= link_to restaurant.name, restaurant_path(restaurant)%> <br>
+<%= restaurant.address %> <br>
+<%= restaurant.closest_tube_station %> <br>
+<%= restaurant.opening_hours %> <br>
+<%= restaurant.website_link %>  <br>
+<%= restaurant.description %>  <br>
+<%= restaurant.vibe %>  <br>
+<%= restaurant.speciality %>  <br>
+<%= restaurant.area.name %>  <br>
+<%= restaurant.craving.name %>  <br>
+<%= restaurant.price.name %>  <br><br>
+<%end %>

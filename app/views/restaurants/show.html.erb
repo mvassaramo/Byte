@@ -1,0 +1,16 @@
+<h1> <%= @restaurant.name %></h1>
+
+<div>
+Description: <%= @restaurant.description %> <br><br>
+Don't Miss: <%= @restaurant.speciality %> <br><br>
+What's the vibe: <%= @restaurant.vibe %> <br><br>
+
+The Details:
+Address: <%= @restaurant.address %> <br><br>
+Opening hours: <%= @restaurant.opening_hours %> <br><br>
+Closest tube station: <%= @restaurant.closest_tube_station %> <br><br>
+<a href= <%= @restaurant.website_link %> > Go to their website </a>
+</div>
+
+
+<p> <%= link_to 'Wanna search again?', restaurant_home_path  %> </p>
