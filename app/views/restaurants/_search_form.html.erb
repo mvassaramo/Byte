@@ -7,7 +7,7 @@
   <%= label_tag(:price_id, "How much are you willing to spend?") %>
   <%= select_tag "price_id", options_from_collection_for_select(Price.all, "id", "name") %> <br><br>
   <%= label_tag(:occasion_id, "Anything else we should know?") %>
-  <%= select_tag "occasion_id", options_from_collection_for_select(Occasion.all, "id", "name") %> <br><br>
+  <%= select_tag "occasion_id", options_from_collection_for_select(Occasion.all, "id", "name"), include_blank: true %> <br><br>
   <%= submit_tag("GET READY TO BRUNCH!") %>
 <% end %>
 </div>

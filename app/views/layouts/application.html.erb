@@ -24,9 +24,7 @@
    </div>
 
    <!-- Use any element to open the sidenav -->
-   <a class="box-shadow-menu"  onclick="openNav()">
-    Menu
-  </a>
+   <a class="box-shadow-menu"  onclick="openNav()"></a>
 
    <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
    <div id="main">
@@ -34,8 +32,14 @@
        <%= image_tag"Byte_logo.png",
        id: "logo" %>
     </h1>
-    <%= yield %>
+    <div class="content">
+      <%= yield %>
+    </div>
+
   </div>
+
+
+
 
   </body>
 </html>
