@@ -12,5 +12,8 @@ Rails.application.routes.draw do
   root "restaurants#home"
 
   get "/non_exist", to: "restaurants#non_exist"
+  get "/contact", to: "restaurants#contact"
+  get "/about", to: "restaurants#about"
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

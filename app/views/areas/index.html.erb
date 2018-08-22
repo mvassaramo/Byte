@@ -1,0 +1,5 @@
+<h1> Select By Area </h1>
+
+<% @areas.each do |area| %>
+<%= link_to area.name, area_path(area) %> <br> <br>
+<% end %>

@@ -1,10 +1,11 @@
 <%= render "search_form" %>
 
-<h1> List of all the Restaurants </h1>
-
+<h1> Search Results </h1>
+<div>
 <% @restaurants.each do |restaurant| %>
 Name: <%= link_to restaurant.name, restaurant_path(restaurant) %> <br>
 Address: <%= restaurant.address %> <br>
 Hours: <%= restaurant.opening_hours %> <br>
 Vibe: <%= restaurant.vibe %>  <br>
 <%end %>
+</div>

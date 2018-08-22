@@ -1,0 +1,7 @@
+<h1><%=@area.name%></h1>
+
+<div>
+<% @area.restaurants.each do |restaurant| %>
+<%= link_to restaurant.name, restaurant_path(restaurant) %><br><br>
+<% end %>
+</div>

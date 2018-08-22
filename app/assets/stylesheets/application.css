@@ -1,3 +1,5 @@
+
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -14,6 +16,29 @@
  *= require_self
  */
  /* The side navigation menu */
+
+
+ #logo {
+     width: 100px;
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+ }
+
+
+ h1 {text-align: center;
+   font-family: 'Raleway';
+}
+ p {text-align: center;
+   font-family: 'Raleway';
+}
+ h2 {text-align: center;
+   font-family: 'Raleway';
+}
+ div {text-align: center;
+   font-family: 'Raleway';
+}
+
  .sidenav {
      height: 100%; /* 100% Full-height */
      width: 0; /* 0 width - change this with JavaScript */
@@ -21,7 +46,7 @@
      z-index: 1; /* Stay on top */
      top: 0; /* Stay at the top */
      left: 0;
-     background-color: #111; /* Black*/
+     background-color: rgb(229, 130, 84); /* Black*/
      overflow-x: hidden; /* Disable horizontal scroll */
      padding-top: 60px; /* Place content 60px from the top */
      transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
@@ -32,7 +57,7 @@
      padding: 8px 8px 8px 32px;
      text-decoration: none;
      font-size: 25px;
-     color: #818181;
+     color: white;
      display: block;
      transition: 0.3s;
  }
@@ -55,6 +80,7 @@
  #main {
      transition: margin-left .5s;
      padding: 20px;
+     max-width: 600px;
  }
 
  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
@@ -63,15 +89,19 @@
      .sidenav a {font-size: 18px;}
  }
 
-
- #logo {
-     width: 100px;
-     display: block;
-    margin-left: auto;
-    margin-right: auto;
- }
-
- h1 {text-align: center}
- p {text-align: center}
- h2 {text-align: center}
- div {text-align: center}
+ .box-shadow-menu {
+  position: relative;
+  padding-left: 1.25em;
+}
+.box-shadow-menu:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.25em;
+  width: 1em;
+  height: 0.15em;
+  background: black;
+  box-shadow:
+    0 0.25em 0 0 black,
+    0 0.5em 0 0 black;
+}
