@@ -3,3 +3,6 @@
 <% @restaurants.each do |restaurant| %>
 <%= link_to restaurant.name, restaurant_path(restaurant)%> <br>
 <%end %>
+<br><br>
+
+<%= link_to ">> Want to add a brunch spot? <<", new_restaurant_path %>
