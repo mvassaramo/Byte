@@ -1,6 +1,6 @@
 <%= render "search_form" %>
 
-<h1> Search Results </h1>
+<h2> SEARCH RESULTS </h2>
 <div>
 <% @restaurants.each do |restaurant| %>
 Name: <%= link_to restaurant.name, restaurant_path(restaurant) %> <br>

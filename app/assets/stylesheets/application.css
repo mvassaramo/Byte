@@ -29,6 +29,39 @@ body {
  }
 
 
+  h1 {
+    color: black;
+    font-family: "Raleway";
+    font-size: 40px;
+    margin: 10px 0 0 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 20em;
+    animation: type 4s steps(60, end);
+  }
+
+  h1:nth-child(2){
+    animation: type2 8s steps(60, end);
+  }
+
+  @keyframes type{
+    from { width: 0; }
+  }
+
+  @keyframes type2{
+    0%{width: 0;}
+    50%{width: 0;}
+    100%{ width: 100; }
+  }
+
+  @keyframes blink{
+    to{opacity: .0;}
+  }
+
+  ::selection{
+    background: black;
+  }
+
  h1 {text-align: center;
    font-family: 'Raleway';
 }
@@ -125,4 +158,17 @@ body {
   width: 100%;
   max-height: 10rem;
   object-fit: cover;
+}
+
+
+.pic {
+ display: block;
+ position: relative;
+ width: 100%;
+ height: 100%;
+ margin: auto;
+ box-sizing: border-box;
+ width: 100%;
+ max-height: 60rem;
+ object-fit: cover;
 }
