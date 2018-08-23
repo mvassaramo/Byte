@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :restaurant_occasions
   resources :occasions
   resources :cravings
   resources :areas

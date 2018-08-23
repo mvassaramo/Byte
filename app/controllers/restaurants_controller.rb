@@ -4,10 +4,6 @@ class RestaurantsController < ApplicationController
     @restaurants = Restaurant.all
   end
 
-  def show
-    @restaurant = Restaurant.find(params[:id])
-  end
-
   def results
     @restaurants = Restaurant.all.select { |restaurant|
       restaurant.area.id == params[:area_id].to_i &&
@@ -32,6 +28,49 @@ class RestaurantsController < ApplicationController
   end
 
   def about
+  end
+
+  def new
+    @restaurant = Restaurant.new
+  end
+
+  def create
+    @restaurant = Restaurant.new(restaurant_params)
+    if @restaurant.valid?
+      @restaurant.save
+        redirect_to restaurant_path(@restaurant)
+    else
+      render :new
+    end
+  end
+
+  def show
+    @restaurant = Restaurant.find(params[:id])
+  end
+
+  def edit
+    @restaurant = Restaurant.find(params[:id])
+  end
+
+  def update
+    @restaurant = Restaurant.find(params[:id])
+    if @restaurant.update(restaurant_params)
+      redirect_to restaurant_path(@restaurant)
+    else
+      render :edit
+    end
+  end
+
+  def delete
+    @restaurant = Restaurant.find(params[:id])
+    @restaurant.destroy
+    redirect_to restaurants_path
+  end
+
+  private
+
+  def restaurant_params
+    params.require(:restaurant).permit(:name, :description, :vibe, :website_link, :closest_tube_station, :address, :opening_hours, :speciality, :price_id, :area_id, :craving_id, :occasion_id)
   end
 
 end

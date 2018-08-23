@@ -1,0 +1,47 @@
+<h2> ADD NEW RESTAURANT </h2>
+
+<%= form_for(@restaurant) do |f| %>
+
+<%= f.label :name %>
+<%= f.text_field :name %> <br><br>
+
+<%= f.label :description %>
+<%= f.text_field :description %> <br><br>
+
+<%= f.label :vibe %>
+<%= f.text_field :vibe %> <br><br>
+
+<%= f.label :website_link %>
+<%= f.text_field :website_link %> <br><br>
+
+<%= f.label :closest_tube_station %>
+<%= f.text_field :closest_tube_station %> <br><br>
+
+<%= f.label :address %>
+<%= f.text_field :address %> <br><br>
+
+<%= f.label :opening_hours %>
+<%= f.text_field :opening_hours %> <br><br>
+
+<%= f.label :speciality %>
+<%= f.text_field :speciality %> <br><br>
+
+<%= f.label :price_id %>
+<%= f.collection_select :price_id, Price.all, :id, :name %> <br><br>
+
+<%= f.label :area_id %>
+<%= f.collection_select :area_id, Area.all, :id, :name %> <br><br>
+
+<%= f.label :craving_id %>
+<%= f.collection_select :craving_id, Craving.all, :id, :name %> <br><br>
+
+<%= f.label :occasion_id %>
+<%= f.collection_select :occasion_id, Occasion.all, :id, :name  %> <br><br>
+
+<%= f.label :image  %>
+<%= f.collection_select :occasion_id, Occasion.all, :id, :name  %> <br><br>
+
+
+<%= f.submit %> <br><br>
+
+<%end %>
