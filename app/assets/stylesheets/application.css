@@ -28,6 +28,9 @@ body {
      margin-right: auto;
  }
 
+ #form {
+   color: rgb(229, 130, 84);
+ }
 
   h1 {
     color: black;

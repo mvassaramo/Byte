@@ -14,5 +14,7 @@ Rails.application.routes.draw do
   get "/contact", to: "restaurants#contact"
   get "/about", to: "restaurants#about"
 
+  get "/analytics", to: "restaurants#analytics"
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

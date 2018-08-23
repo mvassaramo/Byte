@@ -1,8 +1,11 @@
 <h2> ALL RESTAURANTS </h2>
 
+<%= link_to ">> Search for a Restaurant <<", restaurant_home_path %> <br> <br>
+
 <% @restaurants.each do |restaurant| %>
 <%= link_to restaurant.name, restaurant_path(restaurant)%> <br>
 <%end %>
 <br><br>
+
 
 <%= link_to ">> Want to add a brunch spot? <<", new_restaurant_path %>

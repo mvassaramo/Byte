@@ -4,11 +4,12 @@ class RestaurantsController < ApplicationController
     @restaurants = Restaurant.all
   end
 
+
   def results
     @restaurants = Restaurant.all.select { |restaurant|
-      restaurant.area.id == params[:area_id].to_i &&
-      restaurant.craving.id == params[:craving_id].to_i &&
-      restaurant.price.id == params[:price_id].to_i &&
+      (params[:area_id] != "" ? restaurant.area.id == params[:area_id].to_i : true) &&
+      (params[:craving_id] != "" ? restaurant.craving.id == params[:craving_id].to_i : true) &&
+      (params[:price_id] != "" ? restaurant.price.id == params[:price_id].to_i : true) &&
       (params[:occasion_id] != "" ? restaurant.occasion.id == params[:occasion_id].to_i : true)
       }
     if @restaurants.count > 0
@@ -17,6 +18,19 @@ class RestaurantsController < ApplicationController
       render :non_exist
     end
   end
+  # def results
+  #   @restaurants = Restaurant.all.select { |restaurant|
+  #     restaurant.area.id == params[:area_id].to_i &&
+  #     restaurant.craving.id == params[:craving_id].to_i &&
+  #     restaurant.price.id == params[:price_id].to_i &&
+  #     (params[:occasion_id] != "" ? restaurant.occasion.id == params[:occasion_id].to_i : true)
+  #     }
+  #   if @restaurants.count > 0
+  #     render :results
+  #   else
+  #     render :non_exist
+  #   end
+  # end
 
   def non_exist
   end
@@ -37,7 +51,7 @@ class RestaurantsController < ApplicationController
   def create
     @restaurant = Restaurant.new(restaurant_params)
     if @restaurant.valid?
-      
+
       @restaurant.save
         redirect_to restaurant_path(@restaurant)
     else
@@ -69,7 +83,9 @@ class RestaurantsController < ApplicationController
     redirect_to restaurants_path
   end
 
-
+  def analytics
+    @restaurants = Restaurant.all
+  end
 
   private
 
