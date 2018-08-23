@@ -12,4 +12,6 @@ class AreasController < ApplicationController
     @area = Area.all.select { |area| area.id == params[:area_id].to_i }
   end
 
+
+
 end

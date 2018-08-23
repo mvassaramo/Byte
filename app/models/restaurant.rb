@@ -6,6 +6,7 @@ class Restaurant < ApplicationRecord
   mount_uploader :image, ImageUploader
 
 
+
   def self.area_with_most_middle_eastern_restaurants
     hash ={}
     middle_eastern = Restaurant.all.select {|restaurant| restaurant.craving.id == 4}
