@@ -9,7 +9,13 @@ class RestaurantsController < ApplicationController
   end
 
   def results
-    if (@restaurants = Restaurant.all.select { |restaurant| restaurant.area.id == params[:area_id].to_i && restaurant.craving.id == params[:craving_id].to_i && restaurant.price.id == params[:price_id].to_i || restaurant.occasion.id == params[:occasion_id].to_i}).count > 0
+    @restaurants = Restaurant.all.select { |restaurant|
+      restaurant.area.id == params[:area_id].to_i &&
+      restaurant.craving.id == params[:craving_id].to_i &&
+      restaurant.price.id == params[:price_id].to_i &&
+      (params[:occasion_id] != "" ? restaurant.occasion.id == params[:occasion_id].to_i : true)
+      }
+    if @restaurants.count > 0
       render :results
     else
       render :non_exist
