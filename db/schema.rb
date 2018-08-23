@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(version: 2018_08_21_084935) do
     t.integer "area_id"
     t.integer "craving_id"
     t.integer "occasion_id"
+    t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

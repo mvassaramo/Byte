@@ -1,4 +1,3 @@
-<h2> EDIT <%= @restaurant.name.upcase %> </h2>
 
 <%= form_for(@restaurant) do |f| %>
 
@@ -37,6 +36,9 @@
 
 <%= f.label :occasion_id %>
 <%= f.collection_select :occasion_id, Occasion.all, :id, :name  %> <br><br>
+
+<%= f.label :image  %>
+<%= f.file_field :image  %> <br><br>
 
 <%= f.submit %> <br><br>
 

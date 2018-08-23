@@ -13,6 +13,7 @@ class CreateRestaurants < ActiveRecord::Migration[5.2]
       t.integer :area_id
       t.integer :craving_id
       t.integer :occasion_id
+      t.string :image
 
       t.timestamps
     end

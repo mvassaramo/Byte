@@ -39,7 +39,7 @@
 <%= f.collection_select :occasion_id, Occasion.all, :id, :name  %> <br><br>
 
 <%= f.label :image  %>
-<%= f.collection_select :occasion_id, Occasion.all, :id, :name  %> <br><br>
+<%= f.file_field :image  %> <br><br>
 
 
 <%= f.submit %> <br><br>

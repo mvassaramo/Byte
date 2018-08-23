@@ -37,9 +37,11 @@ class RestaurantsController < ApplicationController
   def create
     @restaurant = Restaurant.new(restaurant_params)
     if @restaurant.valid?
+      
       @restaurant.save
         redirect_to restaurant_path(@restaurant)
     else
+      byebug
       render :new
     end
   end
@@ -67,10 +69,12 @@ class RestaurantsController < ApplicationController
     redirect_to restaurants_path
   end
 
+
+
   private
 
   def restaurant_params
-    params.require(:restaurant).permit(:name, :description, :vibe, :website_link, :closest_tube_station, :address, :opening_hours, :speciality, :price_id, :area_id, :craving_id, :occasion_id)
+    params.require(:restaurant).permit(:name, :description, :vibe, :website_link, :closest_tube_station, :address, :opening_hours, :speciality, :price_id, :area_id, :craving_id, :occasion_id, :image)
   end
 
 end

@@ -1,5 +1,4 @@
-<div><%= image_tag"#{@restaurant.name}.jpg", class: "center"%></div>
-
+<div> <%= image_tag(@restaurant.image.url, class: "center") %></div>
 <h2> <%= @restaurant.name %></h2 >
 
 <div>

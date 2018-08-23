@@ -29,7 +29,7 @@ Occasion.create(name: "Brunch Date")
 Occasion.create(name: "Bottomless Brunch")
 Occasion.create(name: "Casual")
 
-
+# Restaurant.destroy_all
 
 csv_text = File.read(Rails.root.join('db', 'seeds', 'restaurant_data.csv'))
 csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
@@ -47,8 +47,9 @@ csv.each do |row|
   t.craving_id = row['craving_id']
   t.price_id = row['price_id']
   t.occasion_id = row['occasion_id']
+  File.open("app/assets/images/#{t.name}.jpg") do |f|
+    t.image = f
+  end
   t.save
   puts "#{t.name} saved"
-
 end
-puts csv_text
