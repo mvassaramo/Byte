@@ -2,19 +2,19 @@
 <h2> <%= @restaurant.name %></h2 >
 
 <div>
-Description: <%= @restaurant.description %> <br><br>
-Don't Miss: <%= @restaurant.speciality %> <br><br>
+<%= @restaurant.description %> <br><br>
+<span id="boldything">Don't Miss: </span> <%= @restaurant.speciality %> <br><br>
 What's the vibe: <%= @restaurant.vibe %> <br><br>
 
-The Details:
-Address: <%= @restaurant.address %> <br><br>
-Opening hours: <%= @restaurant.opening_hours %> <br><br>
+<span class: "center">The Details:</span><br>
+<%= @restaurant.address %> <br>
+Opening hours: <%= @restaurant.opening_hours %> <br>
 Closest tube station: <%= @restaurant.closest_tube_station %> <br><br>
 <a href= <%= @restaurant.website_link %> > Go to their website </a>
 </div>
 
 
-<p> <%= link_to 'Not feeling it & wanna search again?', restaurant_home_path  %> </p><br><br><br>
+<p> <%= link_to 'Not feeling it & wanna search again?', restaurant_home_path  %> </p><br><br>
 
 
 <%= link_to ">> Feel like this restaurant page can be improved? <<", edit_restaurant_path %>

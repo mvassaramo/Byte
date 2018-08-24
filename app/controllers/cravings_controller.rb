@@ -1,4 +1,2 @@
 class CravingsController < ApplicationController
-
-
 end

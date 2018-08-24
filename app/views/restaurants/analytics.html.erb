@@ -1,6 +1,6 @@
 <h2>ANALYTICS</h2>
 
-BY CRAVING:
+<span id="boldything">BY CRAVING:</span>
 <br><br>
 Highest number of:<br><br>
 <% @cravings.each do |craving| %>
@@ -8,16 +8,16 @@ Highest number of:<br><br>
   <%= craving.area_with_most_x_restaurants %> <br><br>
 <% end %><br><br>
 
-BY PRICE:
+<span id="boldything">BY PRICE: </span>
 <br><br>
-Highest number of:<br><br>
+If you're:<br><br>
 <% @prices.each do |price| %>
-  <%= "#{price.name} restaurants are in:" %>
+  <%= "#{price.name},  go => " %>
   <%= price.area_with_price_x_restaurants %> <br><br>
 <% end %><br><br>
 
 
-BY OCCASION:
+<span id="boldything"> BY OCCASION: </span>
 <br><br>
 Highest number of:<br><br>
 <% @occasions.each do |occasion| %>

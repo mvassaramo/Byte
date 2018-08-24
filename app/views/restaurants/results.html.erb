@@ -3,8 +3,8 @@
 <h2> SEARCH RESULTS </h2>
 <div>
 <% @restaurants.each do |restaurant| %>
-Name: <%= link_to restaurant.name, restaurant_path(restaurant) %> <br>
-Address: <%= restaurant.address %> <br>
+<span id="boldything"><%= link_to restaurant.name, restaurant_path(restaurant) %></span> <br>
+<%= restaurant.address %> <br>
 Hours: <%= restaurant.opening_hours %> <br>
 Vibe: <%= restaurant.vibe %>  <br><br><br>
 <%end %>
