@@ -85,6 +85,9 @@ class RestaurantsController < ApplicationController
 
   def analytics
     @restaurants = Restaurant.all
+    @cravings = Craving.all
+    @prices = Price.all
+    @occasions = Occasion.all
   end
 
   private

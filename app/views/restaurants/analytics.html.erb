@@ -1,24 +1,26 @@
 <h2>ANALYTICS</h2>
 
 BY CRAVING:
-<p> Highest number of Middle Eastern Restaurants: <%= Restaurant.area_with_most_middle_eastern_restaurants%> </p>
-<p> Highest number of Asian Restaurants: <%= Restaurant.area_with_most_asian_restaurants %></p>
-<p> Highest number of Superfood Restaurants: <%= Restaurant.area_with_most_superfood_restaurants %> </p>
-<p> Highest number of Greasy Spoon Restaurants: <%= Restaurant.area_with_most_greasyspoon_restaurants %> </p>
-<p> Highest number of Boozy Brunch Restaurants: <%= Restaurant.area_with_most_boozybrunch_restaurants %> </p>
-
-
+<br><br>
+Highest number of:<br><br>
+<% @cravings.each do |craving| %>
+  <%= "#{craving.name} restaurants are in:" %>
+  <%= craving.area_with_most_x_restaurants %> <br><br>
+<% end %><br><br>
 
 BY PRICE:
-<p> Highest number of budget restaurants: <%= Restaurant.area_with_most_cheap_restaurants%> </p>
-<p> Highest number of mid-range restaurants: <%= Restaurant.area_with_most_mid_range_restaurants%> </p>
-<p> Highest number of expensive restaurants: <%= Restaurant.area_with_most_high_end_restaurants%> </p>
+<br><br>
+Highest number of:<br><br>
+<% @prices.each do |price| %>
+  <%= "#{price.name} restaurants are in:" %>
+  <%= price.area_with_price_x_restaurants %> <br><br>
+<% end %><br><br>
+
 
 BY OCCASION:
-
-<p> Highest number of restaurants suitable for patio brunch: <%= Restaurant.area_with_most_patio_brunch_restaurants%> </p>
-<p> Highest number of restaurants suitable for a birthday brunch: <%= Restaurant.area_with_most_bday_brunch_restaurants%> </p>
-<p> Highest number of restaurants suitable for a family brunch: <%= Restaurant.area_with_most_family_brunch_restaurants%> </p>
-<p> Highest number of restaurants suitable for a brunch date: <%= Restaurant.area_with_most_date_brunch_restaurants%> </p>
-<p> Highest number of restaurants suitable for a bottomless brunch: <%= Restaurant.area_with_most_bottomless_brunch_restaurants%> </p>
-<p> Highest number of restaurants suitable for a casual brunch: <%= Restaurant.area_with_most_casual_brunch_restaurants%> </p>
+<br><br>
+Highest number of:<br><br>
+<% @occasions.each do |occasion| %>
+  <%= "#{occasion.name} restaurants are in:" %>
+  <%= occasion.area_with_occasion_x_restaurants %> <br><br>
+<% end %><br><br>
